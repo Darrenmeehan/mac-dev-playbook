@@ -10,6 +10,10 @@
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
+    - name: Check for updates for brew packages
+      shell: brew update
+    - name: Update existing brew packages
+      shell: brew upgrade
 
   roles:
     - role: elliotweiser.osx-command-line-tools
