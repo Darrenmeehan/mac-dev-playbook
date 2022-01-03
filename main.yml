@@ -46,6 +46,10 @@
       when: configure_rust
       tags: ['rust']
 
+    - import_tasks: tasks/starship-shell.yml
+      when: configure_shell
+      tags: ['shell']
+
     - import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 
