@@ -35,7 +35,7 @@
 
 - name: Install global cargo managed packages.
   ansible.builtin.shell:
-    cmd: cargo install {{ item }}
+    cmd: cargo install {{ item }} --force
   loop: "{{ cargo_packages }}"
 
 - name: Install global Ruby gems.
