@@ -9,6 +9,7 @@
       include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
+        - "{{ playbook_dir }}/{{ lookup('env','USER') }}.yml"
       tags: ['always']
     - name: Check for updates for brew packages
       shell: brew update
@@ -62,6 +63,10 @@
     - import_tasks: tasks/visual-studio-code.yml
       when: configure_vscode
       tags: ['vscode']
+
+    - import_tasks: tasks/python.yml
+      when: configure_pyenv
+      tags: ['python']
 
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"
