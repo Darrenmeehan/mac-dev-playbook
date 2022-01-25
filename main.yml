@@ -28,7 +28,9 @@
     - role: geerlingguy.mac.dock
       when: configure_dock
       tags: ['dock']
-
+    - role: markosamuli.pyenv
+      when: configure_pyenv
+      tags: ['python']
   tasks:
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
