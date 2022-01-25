@@ -8,3 +8,6 @@
 
 - name: setup cargo on current shell
   shell: source {{ lookup('env','HOME') }}/.cargo/env
+
+- name: Add AWS Lambda platform
+  shell: rustup target add x86_64-unknown-linux-musl
