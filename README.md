@@ -185,3 +185,10 @@ This project was created by [Jeff Geerling](https://www.jeffgeerling.com/) (orig
 
 [badge-gh-actions]: https://github.com/geerlingguy/mac-dev-playbook/workflows/CI/badge.svg?event=push
 [link-gh-actions]: https://github.com/geerlingguy/mac-dev-playbook/actions?query=workflow%3ACI
+
+
+## Resources
+
+Useful commands for removing or figuring out packages manually installed with homebrew.
+
+https://stackoverflow.com/questions/41029842/easy-way-to-have-homebrew-list-all-package-dependencies
