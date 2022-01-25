@@ -155,6 +155,7 @@ cargo_packages:
   - wrangler
 
 vscode_extensions:
+  - coolbear.systemd-unit-file
   - redhat.ansible
   - renan-msv.ac3d-syntax
   - maelvalais.autoconf
