@@ -5,3 +5,4 @@
   loop: "{{ vscode_extensions | flatten }}"
 
 # FIXME Handle settings
+# FIXME Handle spelling db
