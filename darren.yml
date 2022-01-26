@@ -79,6 +79,7 @@ homebrew_installed_packages:
   - smartmontools
   - ssh-copy-id
   - starship
+  - step
   - syncthing
   - tfenv
   - tmux
