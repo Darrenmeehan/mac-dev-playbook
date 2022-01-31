@@ -101,6 +101,7 @@ homebrew_cask_apps:
   - firefox
   - font-fira-code
   - font-sauce-code-pro-nerd-font
+  - gnu-tar # Needed for https://github.com/cloudalchemy/ansible-prometheus
   - libreoffice
   - licecap
   - obsidian
@@ -134,6 +135,8 @@ osx_script: "~/.osx --no-restart"
 pip_packages:
   - name: pipx
     version: 0.16.5
+  # Needed for https://github.com/cloudalchemy/ansible-prometheus
+  - name: jmespath
 
 pipx_packages:
   - awscli
