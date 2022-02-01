@@ -9,3 +9,6 @@ rules:
 ignore: |
   .github/stale.yml
   roles
+
+warn_list:
+  - no-changed-when  # Commands should not change things if nothing needs doing
