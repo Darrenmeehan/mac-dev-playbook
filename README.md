@@ -10,10 +10,10 @@ This playbook installs and configures most of the software I use on my Mac for w
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
   1. Intall pip, we're currently only bootstrapping the system. Day to day Python tooling will be installed using the playbook.
-    1. `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
-    1. `vim get-pip.py`
-    1. `python3 get-pip.py`
-    1. Confirm pip is installed correctly `python3 -m pip --version`
+     1. `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`. 
+     1. `vim get-pip.py`. 
+     1. `python3 get-pip.py`. 
+     1. Confirm pip is installed correctly `python3 -m pip --version`. 
   1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
      1. Run the following commands
