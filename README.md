@@ -16,9 +16,12 @@ This playbook installs and configures most of the software I use on my Mac for w
      1. Confirm pip is installed correctly `python3 -m pip --version`. 
   1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
-     1. Run the following commands
-     1. Install Ansible: `python3 -m pip install ansible`
-     1. Confirm Ansible is installed correctly.
+     1. Run the following commands. 
+       1. Install Ansible: `python3 -m pip install ansible`. 
+       1. Confirm Ansible is installed correctly.
+       1. Temporarily add Python applications to `$PATH`.  
+         1. `export PATH=/Users/darrenmeehan/Library/Python/3.8/bin:$PATH`. 
+         2. `ansible --version`
 
   1. Clone or download this repository to your local drive.
   1. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
