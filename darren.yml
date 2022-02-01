@@ -64,6 +64,7 @@ homebrew_installed_packages:
   - gcc
   - git
   - github/gh/gh
+  - gnu-tar # Needed for https://github.com/cloudalchemy/ansible-prometheus
   - hadolint
   - hugo
   - jq
@@ -101,7 +102,6 @@ homebrew_cask_apps:
   - firefox
   - font-fira-code
   - font-sauce-code-pro-nerd-font
-  - gnu-tar # Needed for https://github.com/cloudalchemy/ansible-prometheus
   - libreoffice
   - licecap
   - obsidian
