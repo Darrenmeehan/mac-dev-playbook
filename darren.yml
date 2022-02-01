@@ -60,11 +60,11 @@ homebrew_installed_packages:
   - autoconf
   - curl
   - docker-compose
-  - doctl # DigitalOcean CLI
+  - doctl  # DigitalOcean CLI
   - gcc
   - git
   - github/gh/gh
-  - gnu-tar # Needed for https://github.com/cloudalchemy/ansible-prometheus
+  - gnu-tar  # Needed for https://github.com/cloudalchemy/ansible-prometheus
   - hadolint
   - hugo
   - jq
@@ -89,7 +89,7 @@ homebrew_installed_packages:
   - trash
   - openssl
   - wget
-  # - zellij
+  - zellij
   - zsh-history-substring-search
   - zsh-syntax-highlighting
 
@@ -110,17 +110,17 @@ homebrew_cask_apps:
   - raspberry-pi-imager
   - rectangle
   - signal
-  - slack # FIXME Only install if on work machine
+  - slack  # FIXME Only install if on work machine
   - spotify
-  - steam # FIXME Only install on home machine
+  - steam  # FIXME Only install on home machine
   - telegram
-  - ultimaker-cura # FIXME Only install on home machine
+  - ultimaker-cura  # FIXME Only install on home machine
   - visual-studio-code
   - vlc
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
-  - 1475387142 # tailscale
+  - 1475387142  # tailscale
 
 mas_email: ""
 mas_password: ""
@@ -147,6 +147,7 @@ pipx_packages:
   - flake8
   - tox
   - pre-commit
+  - yamllint
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []

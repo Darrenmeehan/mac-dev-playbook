@@ -5,7 +5,7 @@
   ansible.builtin.lineinfile:
     path: "{{ lookup('env','HOME') }}/.zshrc"
     line: eval $(pyenv init --path)
-    create: yes
+    create: true
 
 - name: Set global python versions
   command: pyenv global {{ pyenv_python_versions | join(' ') }}
@@ -14,10 +14,10 @@
   ansible.builtin.lineinfile:
     path: "{{ lookup('env','HOME') }}/.zshrc"
     line: export PATH={{ lookup('env','HOME') }}/.pyenv/shims/pip:$PATH
-    create: yes
+    create: true
 
 - name: Add pipx apps to PATH
   ansible.builtin.lineinfile:
     path: "{{ lookup('env','HOME') }}/.zshrc"
     line: export PATH={{ lookup('env','HOME') }}/.local/bin:$PATH
-    create: yes
+    create: true

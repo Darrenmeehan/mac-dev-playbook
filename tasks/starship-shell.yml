@@ -26,4 +26,4 @@
   ansible.builtin.lineinfile:
     path: "{{ lookup('env','HOME') }}/.zshrc"
     line: eval "$(starship init zsh)"
-    create: yes
+    create: true
