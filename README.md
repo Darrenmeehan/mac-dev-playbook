@@ -9,15 +9,20 @@ This playbook installs and configures most of the software I use on my Mac for w
 ## Installation
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-  2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
+  1. Intall pip, we're currently only bootstrapping the system. Day to day Python tooling will be installed using the playbook.
+    1. `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
+    1. `vim get-pip.py`
+    1. `python3 get-pip.py`
+    1. Confirm pip is installed correctly `python3 -m pip --version`
+  1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
-     1. Run the following command to add Python 3 to your $PATH: `export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"`
-     2. Upgrade Pip: `sudo pip3 install --upgrade pip`
-     3. Install Ansible: `pip3 install ansible`
+     1. Run the following commands
+     1. Install Ansible: `python3 -m pip install ansible`
+     1. Confirm Ansible is installed correctly.
 
-  3. Clone or download this repository to your local drive.
-  4. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
-  5. Run `ansible-playbook main.yml --ask-become-pass` inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
+  1. Clone or download this repository to your local drive.
+  1. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
+  1. Run `ansible-playbook main.yml --ask-become-pass` inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
