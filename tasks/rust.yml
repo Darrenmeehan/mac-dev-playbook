@@ -1,13 +1,13 @@
 ---
 
 - name: update
-  shell: rustup update
+  ansible.builtin.command: rustup update
 
 - name: install nightly
-  shell: rustup toolchain install nightly
+  ansible.builtin.command: rustup toolchain install nightly
 
 - name: setup cargo on current shell
-  shell: source {{ lookup('env','HOME') }}/.cargo/env
+  ansible.builtin.command: source {{ lookup('env','HOME') }}/.cargo/env
 
 - name: Add AWS Lambda platform
-  shell: rustup target add x86_64-unknown-linux-musl
+  ansible.builtin.command: rustup target add x86_64-unknown-linux-musl
