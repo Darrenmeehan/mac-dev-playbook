@@ -1,3 +1,6 @@
 ---
 skip_list:
   - experimental
+
+warn_list:
+  - no-changed-when  # Commands should not change things if nothing needs doing
