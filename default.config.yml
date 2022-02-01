@@ -76,6 +76,7 @@ homebrew_cask_apps:
   - google-chrome
   - handbrake
   - licecap
+  - rectangle
   - sequel-ace
   - slack
   - sublime-text

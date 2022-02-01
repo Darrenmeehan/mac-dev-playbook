@@ -2,6 +2,8 @@
 roles:
   - name: elliotweiser.osx-command-line-tools
   - name: geerlingguy.dotfiles
+  - name: markosamuli.pyenv
 
 collections:
   - name: geerlingguy.mac
+  - name: community.general

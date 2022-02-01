@@ -1,0 +1,29 @@
+---
+
+- name: Ensure ~/.config exists
+  ansible.builtin.file:
+    path: "{{ lookup('env','HOME') }}/.config"
+    state: directory
+
+- name: Add configuration file for Starship
+  ansible.builtin.copy:
+    src: shell/starship.toml
+    dest: "{{ lookup('env','HOME') }}/.config/starship.toml"
+    mode: 0600
+
+- name: Ensure ~/.profile.d exists
+  ansible.builtin.file:
+    path: "{{ lookup('env','HOME') }}/.profile.d"
+    state: directory
+
+- name: Add Starship to ~/.profile.d
+  ansible.builtin.copy:
+    src: shell/99_starship.sh
+    dest: "{{ lookup('env','HOME') }}/.profile.d/99_starship"
+    mode: 0600
+
+- name: Add init script to zsh shell config
+  ansible.builtin.lineinfile:
+    path: "{{ lookup('env','HOME') }}/.zshrc"
+    line: eval "$(starship init zsh)"
+    create: yes

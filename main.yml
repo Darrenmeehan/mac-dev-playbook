@@ -9,7 +9,12 @@
       include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
+        - "{{ playbook_dir }}/{{ lookup('env','USER') }}.yml"
       tags: ['always']
+    - name: Check for updates for brew packages
+      shell: brew update
+    - name: Update existing brew packages
+      shell: brew upgrade
 
   roles:
     - role: elliotweiser.osx-command-line-tools
@@ -24,7 +29,9 @@
     - role: geerlingguy.mac.dock
       when: configure_dock
       tags: ['dock']
-
+    - role: markosamuli.pyenv
+      when: configure_pyenv
+      tags: ['python']
   tasks:
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
@@ -38,12 +45,28 @@
       when: configure_osx
       tags: ['osx']
 
+    - import_tasks: tasks/rust.yml
+      when: configure_rust
+      tags: ['rust']
+
+    - import_tasks: tasks/starship-shell.yml
+      when: configure_shell
+      tags: ['shell']
+
     - import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 
     - import_tasks: tasks/sublime-text.yml
       when: configure_sublime
       tags: ['sublime-text']
+
+    - import_tasks: tasks/visual-studio-code.yml
+      when: configure_vscode
+      tags: ['vscode']
+
+    - import_tasks: tasks/python.yml
+      when: configure_pyenv
+      tags: ['python']
 
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"
