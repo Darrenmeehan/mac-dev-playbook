@@ -10,6 +10,8 @@ configure_osx: true
 configure_vscode: true
 configure_pyenv: true
 
+configure_git_lfs: true
+
 pyenv_init_shell: true
 pyenv_version: "v2.2.3"
 pyenv_global: "{{ pyenv_python310_version }} system"
@@ -65,6 +67,7 @@ homebrew_installed_packages:
   - gcc
   - git
   - github/gh/gh
+  - git-lfs
   - hadolint
   - jq
   - filosottile/musl-cross/musl-cross
