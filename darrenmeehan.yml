@@ -1,0 +1,151 @@
+---
+
+# This file is used for my work setup
+
+configure_dotfiles: false
+configure_rust: false
+configure_shell: true
+configure_terminal: false
+configure_osx: true
+configure_vscode: true
+configure_pyenv: true
+
+pyenv_init_shell: true
+pyenv_version: "v2.2.3"
+pyenv_global: "{{ pyenv_python310_version }} system"
+pyenv_install_from_package_manager: true
+
+pyenv_python39_version: "3.9.9"
+pyenv_python310_version: "3.10.1"
+pyenv_python311_version: "3.11-dev"
+
+pyenv_python_versions:
+  - "{{ pyenv_python38_version }}"
+  - "{{ pyenv_python39_version }}"
+  - "{{ pyenv_python310_version }}"
+  - "{{ pyenv_python311_version }}"
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: false
+dockitems_remove:
+  - Launchpad
+  - TV
+  - Podcasts
+  - 'App Store'
+  - Reminders
+  - Notes
+
+dockitems_persist:
+  - name: Alacritty
+    path: "/Applications/Alacritty.app"
+    pos: 5
+  - name: VSCode
+    path: "/Applications/Visual Studio Code.app"
+    pos: 6
+  - LaunchPad
+
+configure_sudoers: false
+
+dotfiles_repo: https://github.com/Darrenmeehan/dotfiles.git
+dotfiles_repo_version: trunk
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/code/dotfiles
+dotfiles_files:
+  - .zshrc
+  # - .gitignore
+  # - .inputrc
+  # - .osx
+  # - .vimrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - autoconf
+  - curl
+  - docker-compose
+  - gcc
+  - git
+  - github/gh/gh
+  - hadolint
+  - jq
+  - filosottile/musl-cross/musl-cross
+  - ncdu
+  - nmap
+  - shellcheck
+  - smartmontools
+  - ssh-copy-id
+  - starship
+  - tfenv
+  - tmux
+  - tree
+  - trash
+  - openssl
+  - wget
+  - zsh-history-substring-search
+  - zsh-syntax-highlighting
+
+homebrew_cask_apps:
+  - alacritty
+  - docker
+  - firefox
+  - font-fira-code
+  - font-sauce-code-pro-nerd-font
+  - licecap
+  - visual-studio-code
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# pyenv_python_versions:
+#  - 3.9.9
+#  - 3.10.1
+#  - 3.11-dev
+
+pip_packages:
+  - name: pipx
+    version: 0.16.5
+
+pipx_packages:
+  - awscli
+  - glances
+  - pipenv
+  - black
+  - pytest
+  - flake8
+  - tox
+  - pre-commit
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
+
+cargo_packages: []
+
+vscode_extensions:
+  - coolbear.systemd-unit-file
+  - redhat.ansible
+  - renan-msv.ac3d-syntax
+  - maelvalais.autoconf
+  - hookyqr.beautify
+  - bungcip.better-toml
+  - streetsidesoftware.code-spell-checker
+  - ms-azuretools.vscode-docker
+  - mikestead.dotenv
+  - editorconfig.editorconfig
+  - donjayamanne.git-extension-pack
+  - donjayamanne.githistory
+  - bierner.github-markdown-preview
+  - codezombiech.gitignore
+  - eamodio.gitlens
+  - hashicorp.terraform
+  - bierner.markdown-checkbox
+  - bierner.markdown-emoji
+  - bierner.markdown-preview-github-styles
+  - ziyasal.vscode-open-in-github
+  - esbenp.prettier-vscode
+  - ms-python.vscode-pylance
+  - ms-python.python
+  - visualstudioexptteam.vscodeintellicode
