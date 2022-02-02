@@ -90,6 +90,7 @@ homebrew_cask_apps:
   - font-fira-code
   - font-sauce-code-pro-nerd-font
   - licecap
+  - spotify
   - visual-studio-code
 
 # See `geerlingguy.mas` role documentation for usage instructions.
