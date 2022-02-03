@@ -155,3 +155,4 @@ vscode_extensions:
   - ms-python.vscode-pylance
   - ms-python.python
   - visualstudioexptteam.vscodeintellicode
+  - bbenoist.nix
