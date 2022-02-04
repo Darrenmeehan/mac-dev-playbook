@@ -20,7 +20,7 @@ This playbook installs and configures most of the software I use on my Mac for w
        1. Install Ansible: `python3 -m pip install ansible`. 
        1. Confirm Ansible is installed correctly.
        1. Temporarily add Python applications to `$PATH`.  
-         1. `export PATH=/Users/darrenmeehan/Library/Python/3.8/bin:$PATH`. 
+         1. `export PATH=$HOME/Library/Python/3.8/bin:$PATH`.  
          2. `ansible --version`
 
   1. Clone or download this repository to your local drive.

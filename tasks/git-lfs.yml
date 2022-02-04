@@ -1,0 +1,7 @@
+---
+
+- name: Update global git config
+  ansible.builtin.command: git lfs install
+
+- name: Update system git config
+  ansible.builtin.command: git lfs install --system
