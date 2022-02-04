@@ -26,6 +26,7 @@ This playbook installs and configures most of the software I use on my Mac for w
   1. Clone or download this repository to your local drive.
   1. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
   1. Run `ansible-playbook main.yml --ask-become-pass` inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
+  1. It's also possible to run `./apply.sh` which installs the required dependencies. This is recommended to run after a first run of the project.
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
@@ -191,8 +192,8 @@ Check out [Ansible for DevOps](https://www.ansiblefordevops.com/), which teaches
 
 This project was created by [Jeff Geerling](https://www.jeffgeerling.com/) (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
 
-[badge-gh-actions]: https://github.com/geerlingguy/mac-dev-playbook/workflows/CI/badge.svg?event=push
-[link-gh-actions]: https://github.com/geerlingguy/mac-dev-playbook/actions?query=workflow%3ACI
+[badge-gh-actions]: https://github.com/darrenmeehan/mac-dev-playbook/workflows/CI/badge.svg?event=push
+[link-gh-actions]: https://github.com/darrenmeehan/mac-dev-playbook/actions?query=workflow%3ACI
 
 
 ## Resources
