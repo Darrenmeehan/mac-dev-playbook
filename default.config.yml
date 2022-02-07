@@ -7,6 +7,10 @@ configure_osx: true
 
 configure_git_lfs: false
 
+pyenv_python39_version: "3.9.10"
+pyenv_python310_version: "3.10.2"
+pyenv_python311_version: "3.11-dev"
+
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
 dockitems_remove: []
