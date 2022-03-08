@@ -64,6 +64,7 @@ homebrew_installed_packages:
   - git
   - github/gh/gh
   - git-lfs
+  - grex
   - hadolint
   - jq
   - filosottile/musl-cross/musl-cross
