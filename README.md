@@ -200,3 +200,9 @@ This project was created by [Jeff Geerling](https://www.jeffgeerling.com/) (orig
 Useful commands for removing or figuring out packages manually installed with homebrew.
 
 https://stackoverflow.com/questions/41029842/easy-way-to-have-homebrew-list-all-package-dependencies
+
+
+
+Set up git config
+e.g. name, email, default branch
+git config --global init.defaultBranch
