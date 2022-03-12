@@ -13,10 +13,6 @@ pyenv_version: "v2.2.3"
 pyenv_global: "{{ pyenv_python310_version }} system"
 pyenv_install_from_package_manager: true
 
-pyenv_python39_version: "3.9.9"
-pyenv_python310_version: "3.10.1"
-pyenv_python311_version: "3.11-dev"
-
 pyenv_python_versions:
   - "{{ pyenv_python38_version }}"
   - "{{ pyenv_python39_version }}"

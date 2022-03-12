@@ -32,3 +32,11 @@ Rust setup
 
 
 Install `jog`
+Install of packer & vagrant plugins.
+
+```
+vagrant plugin install vagrant-nixos-plugin
+Installing the 'vagrant-nixos-plugin' plugin. This can take a few minutes...
+Fetching vagrant-nixos-plugin-0.2.2.gem
+Installed the plugin 'vagrant-nixos-plugin (0.2.2)'!
+```
