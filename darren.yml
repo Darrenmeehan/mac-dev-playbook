@@ -65,6 +65,7 @@ homebrew_installed_packages:
   - hugo
   - jq
   - filosottile/musl-cross/musl-cross
+  - mitmproxy
   - ncdu
   - nmap
   - nodejs
