@@ -85,6 +85,7 @@ homebrew_installed_packages:
   - trash
   - openssl
   - wget
+  - wireshark
   - zellij
   - zsh-history-substring-search
   - zsh-syntax-highlighting
