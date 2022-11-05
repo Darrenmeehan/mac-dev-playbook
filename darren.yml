@@ -54,6 +54,8 @@ dotfiles_files:
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
+  - bitwarden-cli
+  - cmake
   - curl
   - docker-compose
   - doctl  # DigitalOcean CLI
@@ -65,8 +67,10 @@ homebrew_installed_packages:
   - hugo
   - jq
   - filosottile/musl-cross/musl-cross
+  - michaeleisel/zld/zld
   - mitmproxy
   - ncdu
+  - ninja # Needed for building Cura.
   - nmap
   - nodejs
   - softprops/tools/octopat
@@ -112,7 +116,9 @@ homebrew_cask_apps:
   - spotify
   - steam  # FIXME Only install on home machine
   - telegram
-  - ultimaker-cura  # FIXME Only install on home machine
+  # FIXME Latest 5.x release isnt working
+  # Trying to build from source
+  # - ultimaker-cura  # FIXME Only install on home machine
   - visual-studio-code
   - vlc
   - wireshark
