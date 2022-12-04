@@ -1,9 +1,9 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
 configure_pyenv: false
 
 configure_git_lfs: false

@@ -14,8 +14,10 @@
 
   roles:
     - role: elliotweiser.osx-command-line-tools
+      when: ansible_os_family == "Darwin"
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
+      when: ansible_os_family == "Darwin"
     - role: geerlingguy.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
@@ -23,7 +25,7 @@
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
     - role: geerlingguy.mac.dock
-      when: configure_dock
+      when: configure_dock and ansible_os_family == "Darwin"
       tags: ['dock']
     - role: markosamuli.pyenv
       when: configure_pyenv
@@ -38,7 +40,7 @@
       tags: ['terminal']
 
     - import_tasks: tasks/osx.yml
-      when: configure_osx
+      when: configure_osx and ansible_os_family == "Darwin"
       tags: ['osx']
 
     - import_tasks: tasks/rust.yml
