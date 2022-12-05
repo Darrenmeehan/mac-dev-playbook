@@ -22,6 +22,12 @@
     dest: "{{ lookup('env','HOME') }}/.profile.d/99_starship"
     mode: 0600
 
+- name: Add ~/.zshrc
+  ansible.builtin.copy:
+    src: shell/zshrc
+    dest: "{{ lookup('env','HOME') }}/.zshrc"
+    mode: 0600
+
 - name: Add init script to zsh shell config
   ansible.builtin.lineinfile:
     path: "{{ lookup('env','HOME') }}/.zshrc"
