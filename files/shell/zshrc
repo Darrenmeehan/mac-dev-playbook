@@ -218,4 +218,11 @@ fi
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
+alias c=code
+alias g=git
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+
 typeset -U path
